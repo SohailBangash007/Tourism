@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dream crafts thoughtful small-group journeys to the world's most beautiful places — from the peaks of Hunza to the islands of the Maldives."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#050f0b" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("dream-theme")
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark"
+          var root = document.documentElement
+          root.classList.toggle("light", theme === "light")
+          root.dataset.theme = theme
+          root.style.colorScheme = theme
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute("content", theme === "light" ? "#f2f4ef" : "#050f0b")
+        } catch (error) {}
+      })()
+    </script>
+    <meta property="og:title" content="Dream — Travel, beautifully." />
+    <meta
+      property="og:description"
+      content="Thoughtfully crafted small-group journeys to extraordinary places, led by people who call them home."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dream — Travel, beautifully.</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

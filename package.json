@@ -1,0 +1,31 @@
+{
+  "name": "dream-travel",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dream — a beautifully crafted multi-page travel & tourism website built with React and Tailwind CSS.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs",
+    "check:interact": "node scripts/interact.mjs",
+    "check:a11y": "node scripts/a11y.mjs",
+    "check:states": "node scripts/audit-states.mjs",
+    "shots": "node scripts/shots.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.69.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "@vitejs/plugin-react": "^6.2.1",
+    "axe-core": "^4.14.0",
+    "puppeteer-core": "^25.16.0",
+    "tailwindcss": "^4.3.4",
+    "vite": "^8.3.6"
+  }
+}

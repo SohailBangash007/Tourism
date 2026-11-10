@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+scripts/check-results.json
+scripts/shots/
+npm-debug.log*
